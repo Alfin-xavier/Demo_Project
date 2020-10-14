@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-10-14T14:47:10 IST" name="Suite" finished-at="2020-10-14T14:47:55 IST" duration-ms="44302">
+    <groups>
+    </groups>
+    <test started-at="2020-10-14T14:47:10 IST" name="Test" finished-at="2020-10-14T14:47:55 IST" duration-ms="44302">
+      <class name="com.atmecs.demo_project.tests.JsonLoader">
+        <test-method signature="empDetails()[pri:0, instance:com.atmecs.demo_project.tests.JsonLoader@5af97850]" started-at="2020-10-14T14:47:10 IST" name="empDetails" finished-at="2020-10-14T14:47:55 IST" duration-ms="44265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- empDetails -->
+      </class> <!-- com.atmecs.demo_project.tests.JsonLoader -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

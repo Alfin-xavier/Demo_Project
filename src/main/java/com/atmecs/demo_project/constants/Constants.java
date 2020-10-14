@@ -12,4 +12,6 @@ public class Constants
 	public static final String SCREEN_SHOTS = "./screenshots";
 	public static final String LOG4J_FILE = "./src/main/resources/log4j.properties";
 	public static final String LOG4J_XML = "./src/main/resources/log4j.xml";
+	public static final String JSON_DATA = "./src/main/resources/datas/employee.json";
+	public static final String READ_DATA = "./src/main/resources/datas/emp.json";
 }
