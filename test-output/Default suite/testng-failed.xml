@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.atmecs.demo_project.tests.Employee_Details">
+      <class name="com.atmecs.demo_project.pagehelper.ReadFromFile">
         <methods>
-          <include name="empDetails"/>
+          <include name="readData"/>
         </methods>
-      </class> <!-- com.atmecs.demo_project.tests.Employee_Details -->
+      </class> <!-- com.atmecs.demo_project.pagehelper.ReadFromFile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
