@@ -1,20 +1,17 @@
 package com.atmecs.demo_project.tests;
 
 import org.testng.annotations.Test;
-import com.atmecs.demo_project.pagehelper.ReadFromFile;
-import com.atmecs.demo_project.pagehelper.WriteFromFile;
+import com.atmecs.demo_project.pagehelper.JsonFileOperations;
 
 public class Employee_Details 
 {
 	@Test
 	public void empDetails() throws Exception
 	{
-		ReadFromFile readFile = new ReadFromFile();
-		WriteFromFile writeFile = new WriteFromFile();
+		JsonFileOperations opertaion = new JsonFileOperations();
 		
-		//System.out.println("");
-		writeFile.writeData();
-		readFile.readData();
+		opertaion.writeData();
+		opertaion.readData();
 		 
 	}
 }
