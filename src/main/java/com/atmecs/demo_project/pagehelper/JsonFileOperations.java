@@ -1,5 +1,6 @@
 package com.atmecs.demo_project.pagehelper;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -7,6 +8,7 @@ import java.io.IOException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 public class JsonFileOperations 
 {
@@ -20,7 +22,7 @@ public class JsonFileOperations
 		emp .put("Name", emp_name);
 		emp .put("Mail", e_mail);
 		emp .put("Mobile", phone);
-		emp .put("department", department);
+		emp .put("Department", department);
 		return emp;
 	}
 
@@ -64,9 +66,9 @@ public class JsonFileOperations
 		{
 			JSONObject emp = (JSONObject) employees.get(i);
 			
-			String name =(String) emp.get("emp_name");
-			String mail = (String) emp.get("e_mail");
-			String mobile = (String) emp.get("phone");
+			String name =(String) emp.get("Name");
+			String mail = (String) emp.get("Mail");
+			String mobile = (String) emp.get("Mobile");
 			String department = (String) emp.get("department");
 			
 			System.out.println("Details of the employee "+i);
@@ -76,5 +78,31 @@ public class JsonFileOperations
 			System.out.println("Mobile Number of the employee : "+mobile);
 			System.out.println("Department of the employee : "+department+"\n\n");
 		}
+	}
+	
+	
+	@SuppressWarnings("unchecked")
+	public void updateData() throws Exception
+	{
+		Object obj= parser.parse(new FileReader("./src/main/resources/datas/emp.json"));
+		
+		JSONObject jsonOjb = (JSONObject) obj;
+		
+		JSONArray employees = (JSONArray) jsonOjb.get("Employees");
+		
+		for(int i=0;i<employees.size();i++)
+		{
+			JSONObject emp = (JSONObject) employees.get(i);
+			if(emp.get("Name").equals("ABC"))
+			{
+				emp.put("Name", "Alfin");
+				response = new JSONObject();
+				response.put("Employees", employees );
+			}
+		}
+		
+		FileWriter file = new FileWriter("./src/main/resources/datas/emp.json");
+		file.write(response.toJSONString());
+		file.close();
 	}
 }

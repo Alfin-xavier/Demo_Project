@@ -11,7 +11,10 @@ public class Employee_Details
 		JsonFileOperations opertaion = new JsonFileOperations();
 		
 		opertaion.writeData();
+		
 		opertaion.readData();
+		
+		opertaion.updateData();
 		 
 	}
 }
