@@ -80,29 +80,4 @@ public class JsonFileOperations
 		}
 	}
 	
-	
-	@SuppressWarnings("unchecked")
-	public void updateData() throws Exception
-	{
-		Object obj= parser.parse(new FileReader("./src/main/resources/datas/emp.json"));
-		
-		JSONObject jsonOjb = (JSONObject) obj;
-		
-		JSONArray employees = (JSONArray) jsonOjb.get("Employees");
-		
-		for(int i=0;i<employees.size();i++)
-		{
-			JSONObject emp = (JSONObject) employees.get(i);
-			if(emp.get("Name").equals("ABC"))
-			{
-				emp.put("Name", "Alfin");
-				response = new JSONObject();
-				response.put("Employees", employees );
-			}
-		}
-		
-		FileWriter file = new FileWriter("./src/main/resources/datas/emp.json");
-		file.write(response.toJSONString());
-		file.close();
-	}
 }

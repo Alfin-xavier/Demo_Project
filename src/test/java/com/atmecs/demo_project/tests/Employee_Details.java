@@ -14,7 +14,5 @@ public class Employee_Details
 		
 		opertaion.readData();
 		
-		opertaion.updateData();
-		 
 	}
 }
